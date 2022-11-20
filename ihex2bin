@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Converting $1 to ${1%%hex}bin"
+objcopy --gap-fill=0xff -I ihex $1 -O binary ${1%%hex}bin
+

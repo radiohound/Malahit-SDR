@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Converting $1 to ${1%%bin}hex"
+objcopy --change-addresses 0x8000000 -I binary $1 -O ihex ${1%%bin}hex
+

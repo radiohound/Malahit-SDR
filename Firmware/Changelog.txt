@@ -1,0 +1,165 @@
+1.0a:
+- added S-meter calibration
+- S-meter error has been fixed due to which previously signals above 59 + 20dB
+  were not visible
+- sound indication is entered during manual shutdown or touchscreen
+- sound off indication is entered
+- fixed frequency correction error (parameter F correct)
+- introduced the function of filling the panorama - the FFT fill parameter in
+  the HARD menu
+- added turning off the touch screen with a long press on the sound encoder
+- something in the little things
+
+1.0b:
+- added RDS reception in WFM - to enable RDS, you need to click on the
+  waterfall field when receiving in WFM. RDS reception is only possible if the
+  RDS level is high enough
+- fixed bug of filter switching on additional board
+- fixed error in msi001 settings - receiver at 50MHz goes through, without hole at 50MHz
+- added a parameter to the hard menu - BEEP LVL - the volume of the tone when
+  you press the controls
+- some minor bugs fixed
+
+1.0c:
+- dsp filter settings are moved to the hard menu;
+- added three operatively switchable filters - selection by means of a sound encoder;
+- introduced deceleration of the encoder when switching pages band;
+- introduced the deceleration of the sound encoder when switching the filter;
+- minor fixes in the RDS part;
+- in RDS mode added frequency markers 19, 38 and 57 kHz;
+- minor improvements and bug fixes;
+
+1.0d:
+- fixed USB operation - USB was unstable on version 1.0c
+- protection against false switching is made - when switching on, press the
+  button 3 times within an interval of 5 seconds
+
+1.0e:
+- a possibly critical error has been fixed - there was an incorrect work with
+  memory and there could be problems with data processing;
+- added additional characters in the font, when displaying RDS and CW decoder
+  information;
+- corrected S-meter - now more accurate S scales;
+- added the ability to indicate the signal level in dBm - in the HARD menu,
+  the "Ind type" parameter. Readings are displayed to the right of the S meter
+  scale.
+
+1.0f:
+- introduced a stylized retro scale in the FM broadcast range;
+- increased the degree of averaging of the S-meter;
+- changed the frequency correction mechanism - now it should be more accurate
+  and does not depend on the frequency at which the calibration is done;
+- detected and fixed error of switching DFT 120-150 MHz;
+- renamed the state of the parameters: "Enable" to "Enabled", "Disable" to "Disabled";
+- fixed a bug when working with a step of 8.33 kHz;
+- fixed error with receiver stuck at low supply voltage;
+- added selection of clock frequency depending on the processor revision:
+  revision Y operates at 465MHz, revision V - at 480MHz;
+- reduced interference from the touchscreen;
+- changed the frequency of the PWM backlight for a more complete range of
+  brightness control;
+- The error of saving settings in the Visual and Audio menus has been fixed -
+  earlier settings might not be saved when they were changed;
+- S-meter correction made when UHF is turned on
+- made the mode of enabling and disabling the image of the panorama and
+  waterfall - in the Visual menu the parameter "View Pan & Wtf. In this mode,
+  the data in the display is only clamped when changing the settings by the
+  user. This reduces the level of interference.
+- fixed a bug with step selection - the bug led to a frequency failure when
+  choosing a step;
+- added shutdown timer - in the HARD menu the Activity timer button;
+- the switching mechanism is changed - one press at a time in three;
+- in the Visual menu, the bug with the backlight of the "LCD Sleep" button has
+  been fixed.
+
+1.10a:
+- changed the inscription on the splash screen;
+- changed the inscription of the Vbat control option - Standart is replaced by Standard;
+- at the request of the users, the sensitivity of the touchscreen returned -
+  please do not complain about the possible interference, we were not
+  supporters of this return :)
+- changed the setting of the reverse encoders. This is now one option on the hard menu;
+- added autosearch of stations for Retroscale in VHF FM;
+- added the option step "<-NEXT->" on the Retroscale for transition by rotating the knob
+  from station to station (if available on the scale);
+- added color selection (one of three) for Retroscale;
+- added IQ swap option to the HARD menu - to solve problems with Chinese
+  clones, in which I and Q signals are mixed;
+- on the main screen the AGC adjustment is replaced by ATT;
+- added a DC suppression adjustment function to the VISUAL menu - this is a hump in the 
+  center of the panorama.
+
+1.10b:
+- fixed error in the S-meter readings for frequencies above 30MHz;
+- the panorama scale injection has been changed - now instead of x1, x2, x4,
+  160kHz, 80kHz, 40kHz are shown;
+- in SSB the 100kHz step is excluded and the 25Hz step is added;
+- the touchscreen sensitivity is lowered again :);
+- added synchronous AM detector;
+- the frequency at which the low-pass filter 500000 is turned on is increased
+  to 540,000, for better suppression of signals above the frequency of 500 kHz;
+- added Auto Notch filter to the Audio menu;
+- stretched grunginess adjustment;
+- added DSB mode - as a kind of SSB;
+- added CW mode - as a kind of SSB;
+
+1.10c:
+- improved graphical display of the spectrum
+- improved optimization of algorithms, increased display speed, especially in WFM mode
+- added the ability to determine the type of inclusion - one or three clicks.
+  If PD15 (pin 7 of the RESERVED field) is open, then turn on by one press; if
+  this pin is shorted to a common wire, then turn on by three clicks
+- the HARD menu has been improved
+- changed battery indication - voltage is indicated over the picture
+- added the ability to control user equipment using a discrete signal - PD14
+  (pin 8 of the RESERVED field)
+- added a button for switching audio output in the HARD menu. It duplicates
+  the audio output switch. Made by user request.
+- added modes SAM-U and SAM-L
+- added engineering settings to the HARD menu
+- added automatic Notch filter in AM mode
+- added saving of retro scale type
+- changed the management of high-frequency filters at the input of the receiver
+- fixed error during frequency tuning
+- fixed bugs in automatic station search in FM mode
+- added Pseudo Stereo function
+- added "CCIR / JAPAN" Retroscale band selector to AUDIO menu
+- respectively, added Retroscale for the Japanese VHF FM band 76.1 MHz - 94.9
+  MHz and 6 presets for different regions of Japan, agreed with Japanese
+  users.
+- Fixed a bug when canceling the autosearch mode for stations and when exiting
+  the autosearch without saving the found one (refusing to save the found). In
+  previous versions, in these cases, all stations that were on the scale
+  before the start of the autosearch were erased and the scale became empty.
+  Now, in these cases, the original scale is restored.
+- the design of the regular end of autosearch has been changed, a table-grid
+  of frequencies for found stations has been added, messages about the absence
+  or the number of stations found have been added.
+- autosearch is no longer dependent on the inclusion of the stereo mode and
+  the state of the activated outputs to the speaker and headphones, it works
+  in any combination of states, after the end of the search, the original
+  state of the stereo mode is restored.
+- in some places of the editing menu, the retroscales of the CANCEL key names
+  are changed to EXIT, as they are closer in the meaning of the action being
+  performed.
+- Added a limitation on the number of stations on Retroskale - 69 for the CCIR
+  band and 63 for JAPAN - as the maximum number with an interval between
+  neighboring stations from 300 kHz and above.
+- fixed minor bugs of previous versions related to preserving the color of the
+  scales and saving the step type (50 kHz / NEXT) for each scale.
+- reduced the speed of switching stations in the NEXT step mode.
+- the operation of the synchronous AM detector has been fixed (07/26/2021)
+
+1.10d:
+- fixed the error indicating the firmware version. The version is now
+  indicated on the splash screen in the lower right corner
+- added display noise reduction function to HARD menu 
+- WTF replaced with WF
+- changed encoder control - now, being in the menu, the frequency encoder is
+  used for control
+- added 9kHz step in SSB
+- added the ability to select colors in the Visual menu
+- excluded Sleeptime parameter for backlight control
+- no delay when switching between menus
+- small bugs fixed
+- 11/17/2021 lower receiving frequency reduced to 10 kHz
